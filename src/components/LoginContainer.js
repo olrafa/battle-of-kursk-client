@@ -1,12 +1,13 @@
 import React from 'react'
 import LoginForm from './LoginForm'
-import {connect} from 'react-redux'
-import {login} from '../actions/auth'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { login } from '../actions/auth'
 
 class LoginFormContainer extends React.Component {
-  state = { 
-    email: '',
-    password: '' 
+  state = {
+    userName: '',
+    password: ''
   }
 
   onSubmit = (event) => {
@@ -20,14 +21,25 @@ class LoginFormContainer extends React.Component {
     })
   }
 
+  goToRegister = () => {
+    return <button>
+      <Link
+        to={`/register`}>Register
+      </Link>
+    </button>
+  }
+
   render() {
     return (
-    <LoginForm 
-      onSubmit={this.onSubmit} 
-      onChange={this.onChange} 
-      values={this.state} />
+      <div>
+        <LoginForm
+          onSubmit={this.onSubmit}
+          onChange={this.onChange}
+          values={this.state} />
+        {this.goToRegister()}
+      </div>
     )
   }
 }
 
-export default connect(null, {login})(LoginFormContainer)
+export default connect(null, { login })(LoginFormContainer)
