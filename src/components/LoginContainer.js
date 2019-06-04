@@ -1,12 +1,17 @@
 import React from 'react'
+import LoginForm from './LoginForm'
 import {connect} from 'react-redux'
-import {createEvent} from '../actions/createEvent'
-import EventForm from './EventForm'
+import {login} from '../actions/auth'
 
-class EventFormContainer extends React.Component {
-  state = {
-    Username: '',
-    Password: '',
+class LoginFormContainer extends React.Component {
+  state = { 
+    email: '',
+    password: '' 
+  }
+
+  onSubmit = (event) => {
+    event.preventDefault()
+    this.props.login(this.state.email, this.state.password)
   }
 
   onChange = (event) => {
@@ -15,25 +20,14 @@ class EventFormContainer extends React.Component {
     })
   }
 
-  onSubmit = (event) => {
-    console.log("OnSubmit test")
-    event.preventDefault()
-    this.props.createEvent(this.state)
-    this.setState({
-      name: '',
-      date: '',
-      description: ''
-    })
-  }
-
   render() {
     return (
-    <EventForm
-      onSubmit={this.onSubmit}
-      onChange={this.onChange}
-      values={this.state}
-    />)
+    <LoginForm 
+      onSubmit={this.onSubmit} 
+      onChange={this.onChange} 
+      values={this.state} />
+    )
   }
 }
 
-export default connect(null, {createEvent})(EventFormContainer)
+export default connect(null, {login})(LoginFormContainer)
