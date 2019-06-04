@@ -14,6 +14,7 @@ export default function GamesList(props) {
     </li>)
  
   return (<div>
+    <h1>Welcome</h1>
     <ul>{gamesList}</ul>
   </div>)
  

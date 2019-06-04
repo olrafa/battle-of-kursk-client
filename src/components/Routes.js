@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import LoginContainer from "./LoginContainer";
-import LobbyContainer from "./GameLobbyContainer";
+import GamesLobbyContainer from "./GamesLobbyContainer";
 
 import '../App.css'
 
@@ -23,8 +23,8 @@ function Routes(props) {
 
       {props.authenticated && (
         <Switch>
-          <Route path="/" exact component={LobbyContainer} />
-          <Route path="" render={() => <Redirect to="/" />} />
+          <Route path="/games" exact component={GamesLobbyContainer} />
+          <Route path="" render={() => <Redirect to="/games" />} />
         </Switch>
       )}
       </div>
