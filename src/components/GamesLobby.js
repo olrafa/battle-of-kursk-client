@@ -12,7 +12,6 @@ export default function GamesList(props) {
         Game #{game.id}
       </Link>
     </li>)
-
  
   return (<div>
     <ul>{gamesList}</ul>
