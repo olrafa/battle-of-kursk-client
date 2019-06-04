@@ -15,10 +15,7 @@ function App() {
       <main>
         <Route exact path="/" component={LoginContainer} />
         <Route exact path="/games" component={GamesLobbyContainer} />
-        {/* <Route path="/practice" component={} />
-        <Route path="/game1" component={} />
-        <Route path="/game2" component={} />
-        <Route path="/game3" component={} /> */}
+
       </main>
     </div>
   );
