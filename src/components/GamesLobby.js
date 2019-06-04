@@ -9,7 +9,7 @@ export default function GamesList(props) {
   const gamesList = games && games
     .map(game => <li key={game.id}>
       <Link to={`/games/${game.id}`}>
-        {game.name}
+        Game #{game.id}
       </Link>
     </li>)
 

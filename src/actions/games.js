@@ -13,7 +13,7 @@ export const loadGames = () => (dispatch, getState) => {
   if (getState().games) return
   request(`${baseUrl}/games`)
   .then(response => {
-    dispatch(gamesFetched(response.body))
+    dispatch(gamesFetched(response.body.games))
   })
   .catch(console.error)
 }
