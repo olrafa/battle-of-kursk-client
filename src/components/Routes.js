@@ -11,20 +11,22 @@ function Routes(props) {
   return (    
     <main className="App">
       <header className="App-header">
-        <h1>Battle of Kursk</h1>
+        <h1>BATTLE OF KURSK</h1>
       </header>
       <div>
       {!props.authenticated && (
         <Switch>
           <Route path="/login" component={LoginContainer} />
-          <Route path="" render={() => <Redirect to="/login" />} />
+          <Route path="" render={() => 
+          <Redirect to="/login" />} />
         </Switch>
       )}
 
       {props.authenticated && (
         <Switch>
           <Route path="/games" exact component={GamesLobbyContainer} />
-          <Route path="" render={() => <Redirect to="/games" />} />
+          <Route path="" render={() => 
+          <Redirect to="/games" />} />
         </Switch>
       )}
       </div>
