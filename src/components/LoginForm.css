@@ -1,0 +1,22 @@
+.login-form {
+  width: 350px;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.login-form h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login-form input {
+  width: 200px;
+}
+
+.login-form button {
+  width: 100px;
+}
+
+.image  img {
+  width: 450px;
+}
