@@ -5,13 +5,13 @@ import {login} from '../actions/auth'
 
 class LoginFormContainer extends React.Component {
   state = { 
-    email: '',
+    username: '',
     password: '' 
   }
 
   onSubmit = (event) => {
     event.preventDefault()
-    this.props.login(this.state.email, this.state.password)
+    this.props.login(this.state.user_name, this.state.password)
   }
 
   onChange = (event) => {
