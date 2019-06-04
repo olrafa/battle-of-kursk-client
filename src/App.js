@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      {/* below this is a template */}
+      <main>
+        <Route exact path="/" component={} />
+        <Route path="/practice" component={} />
+        <Route path="/dog-breeds/:breed" component={} />
+        <Route path="/game1" component={} />
+        <Route path="/game2" component={} />
+        <Route path="/game3" component={} />
+      </main>
     </div>
   );
 }
