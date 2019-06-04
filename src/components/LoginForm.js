@@ -1,6 +1,5 @@
 import React from 'react'
 import tank from '../images/tank2.png'
-
 import './LoginForm.css'
 
 export default function LoginForm(props) {
@@ -28,8 +27,7 @@ export default function LoginForm(props) {
             name="password" 
             value={props.values.password} 
             onChange={props.onChange} />
-          </label>
-          
+          </label>          
           <button type="submit">Login</button>
         </form>
       </div>

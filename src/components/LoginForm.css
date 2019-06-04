@@ -1,6 +1,6 @@
 .login-form {
   width: 350px;
-  margin: 25px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -19,4 +19,5 @@
 
 .image  img {
   width: 450px;
+  margin-top: 115px;
 }

@@ -11,7 +11,6 @@ function Routes(props) {
   return (    
     <main className="App">
       <header className="App-header">
-        <h1>BATTLE OF KURSK</h1>
       </header>
       <div>
       {!props.authenticated && (
