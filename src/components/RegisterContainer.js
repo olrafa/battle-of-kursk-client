@@ -1,7 +1,8 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {createUser} from '../actions/createUser'
-import Register from './Register'
+import React from 'react';
+import { connect } from 'react-redux';
+import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
+import { createUser } from '../actions/createUser';
+import Register from './Register';
 
 class RegisterContainer extends React.Component {
   state = {
@@ -33,14 +34,23 @@ class RegisterContainer extends React.Component {
     })
   }
 
+  selectCountry = (val) => {
+    console.log('testing value for country:', val)
+    this.setState(
+    {
+      country: val
+    });
+  }
+
   render() {
     return (
-    <Register
-      onSubmit={this.onSubmit}
-      onChange={this.onChange}
-      values={this.state}
-    />)
+      <Register
+        onSubmit={this.onSubmit}
+        onChange={this.onChange}
+        values={this.state}
+        selectCountry={this.selectCountry}
+      />)
   }
 }
 
-export default connect(null, {createUser})(RegisterContainer)
+export default connect(null, { createUser })(RegisterContainer)
