@@ -5,39 +5,6 @@ import { loadGame, updateGame } from '../actions/games'
 
 class GameBoardContainer extends React.Component {
 
-  state = { editMode: false }
-
-
-  onEdit = () => {
-      this.setState({
-      editMode: true,
-      formValues: {
-        id: this.props.game.id,
-        playerOne: this.props.game.playerOne,
-        playerTwo: this.props.game.playerTwo,
-        playerOneBoard: this.props.playerOneBoard,
-        playerTwoBoard: this.props.playerTwoBoard
-      }
-    })
-  }
-
-  onChange = game => {
-    this.setState({
-      formValues: {
-        ...this.state.formValues,
-        [game.target.name]: game.target.value
-      }
-    })
-  }
-
-  onSubmit = (game) => {
-    game.preventDefault()
-    this.setState({
-      editMode: false
-    })
-    this.props.updateGame(this.props.game.id, this.state.formValues)
-  }
-
   componentDidMount() {
     const { id } = this.props.match.params
     this.props.loadGame(Number(id))
@@ -46,9 +13,6 @@ class GameBoardContainer extends React.Component {
   render() {
     return (<GameBoard
       game={this.props.game}
-      onEdit={this.onEdit}
-      onChange={this.onChange}
-      onSubmit={this.onSubmit}
     />)
   }
 }
