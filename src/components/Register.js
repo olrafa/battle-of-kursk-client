@@ -14,8 +14,8 @@ class Register extends React.Component {
             Username:
           <input
             type="text"
-            name="userName"
-            value={this.props.values.userName}
+            name="user_name"
+            value={this.props.values.user_name}
             onChange={this.props.onChange} />
           </label>
           <br />
@@ -41,8 +41,8 @@ class Register extends React.Component {
             First name:
           <input
             type="text"
-            name="firstName"
-            value={this.props.values.firstName}
+            name="first_name"
+            value={this.props.values.first_name}
             onChange={this.props.onChange} />
           </label>
           <br />
@@ -50,8 +50,8 @@ class Register extends React.Component {
             Last name:
           <input
             type="text"
-            name="lastName"
-            value={this.props.values.lastName}
+            name="last_name"
+            value={this.props.values.last_name}
             onChange={this.props.onChange} />
           </label>
           <br />

@@ -9,7 +9,7 @@ export default function reducer(state = initialState, action) {
     case USER_CREATE_SUCCESS:
       return [
         ...state,
-        action.event
+        action.user
       ];
     default:
       return state

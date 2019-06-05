@@ -3,15 +3,20 @@ import { connect } from 'react-redux';
 import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 import { createUser } from '../actions/createUser';
 import Register from './Register';
+// import { createBrowserHistory } from 'history';
+
+// const history = createBrowserHistory({
+//   forceRefresh: true
+// });
 
 class RegisterContainer extends React.Component {
   state = {
-    userName: '',
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: '',
-    country: '',
+    user_name: null,
+    email: null,
+    password: null,
+    first_name: null,
+    last_name: null,
+    country: null,
   }
 
   onChange = (event) => {
@@ -25,13 +30,15 @@ class RegisterContainer extends React.Component {
     event.preventDefault()
     this.props.createUser(this.state)
     this.setState({
-      userName: '',
-      email: '',
-      password: '',
-      firstName: '',
-      lastName: '',
-      country: '',
+      user_name: null,
+      email: null,
+      password: null,
+      first_name: null,
+      last_name: null,
+      country: null,
     })
+    alert("You have successfully created your account")
+    setTimeout( () => this.props.history.push('/'), 2000)
   }
 
   selectCountry = (val) => {
