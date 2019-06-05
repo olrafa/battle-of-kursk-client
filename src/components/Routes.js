@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import LoginContainer from "./LoginContainer";
 import GamesLobbyContainer from "./GamesLobbyContainer";
+import GamesBoardContainer from './GameBoardContainer'
 
 import '../App.css'
 
@@ -13,21 +14,10 @@ function Routes(props) {
       <header className="App-header">
       </header>
       <div>
-      {!props.authenticated && (
-        <Switch>
           <Route path="/login" component={LoginContainer} />
-          <Route path="" render={() => 
-          <Redirect to="/login" />} />
-        </Switch>
-      )}
-
-      {props.authenticated && (
-        <Switch>
           <Route path="/games" exact component={GamesLobbyContainer} />
-          <Route path="" render={() => 
-          <Redirect to="/games" />} />
-        </Switch>
-      )}
+          <Route path='/games/:id' component={GamesBoardContainer} />
+
       </div>
     </main>
   );
