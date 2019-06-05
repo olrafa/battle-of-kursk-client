@@ -14,7 +14,9 @@ class GameBoardContainer extends React.Component {
       formValues: {
         id: this.props.game.id,
         playerOne: this.props.game.playerOne,
-        playerTwo: this.props.game.playerTwo
+        playerTwo: this.props.game.playerTwo,
+        playerOneBoard: this.props.playerOneBoard,
+        playerTwoBoard: this.props.playerTwoBoard
       }
     })
   }
@@ -47,8 +49,6 @@ class GameBoardContainer extends React.Component {
       onEdit={this.onEdit}
       onChange={this.onChange}
       onSubmit={this.onSubmit}
-      editMode={this.state.editMode}
-      formValues={this.state.formValues}
     />)
   }
 }
