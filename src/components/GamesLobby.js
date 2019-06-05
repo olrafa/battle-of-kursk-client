@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
+import './GameLobby.css'
 
 export default function GamesList(props) {
   const { games } = props
@@ -13,9 +14,11 @@ export default function GamesList(props) {
       </Link>
     </li>)
  
-  return (<div>
-    <h1>Welcome</h1>
-    <ul>{gamesList}</ul>
-  </div>)
+  return (
+    <div className='game-lobby'>
+      <h1>Welcome</h1>
+      <ul>{gamesList}</ul>
+    </div>
+  )
  
 }
