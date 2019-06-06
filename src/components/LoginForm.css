@@ -1,7 +1,6 @@
 .login-form {
   width: 350px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .login-form h2 {
@@ -11,19 +10,21 @@
 
 .login-form input {
   padding: 7px;
-  border-radius: 5px;
+  border-radius: 3px;
   margin: 3px;
   width: 200px;
 }
 
 .login-form button {
   padding: 5px;
-  width: 100px;
+  width: 218px;
   margin-right: 35px;
   margin-top: 5px;
+  margin-left: 108px;
+  border-radius: 3px;
 }
 
 .image  img {
-  width: 450px;
+  width: 350px;
   margin-top: 115px;
 }

@@ -1,13 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 import { createUser } from '../actions/createUser';
 import Register from './Register';
-// import { createBrowserHistory } from 'history';
-
-// const history = createBrowserHistory({
-//   forceRefresh: true
-// });
 
 class RegisterContainer extends React.Component {
   state = {
@@ -26,7 +20,6 @@ class RegisterContainer extends React.Component {
   }
 
   onSubmit = (event) => {
-    console.log("OnSubmit test")
     event.preventDefault()
     this.props.createUser(this.state)
     this.setState({
@@ -42,7 +35,6 @@ class RegisterContainer extends React.Component {
   }
 
   selectCountry = (val) => {
-    console.log('testing value for country:', val)
     this.setState(
     {
       country: val

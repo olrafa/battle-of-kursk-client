@@ -9,7 +9,7 @@ export default function LoginForm(props) {
         <img src={tank} alt="tank"/>
       </div>
       <div className="login-form">
-        <h2>Login</h2>
+        <h2>LOGIN SOLDIER</h2>
         <form onSubmit={props.onSubmit}>
           <label>
           Username: &nbsp;
@@ -28,8 +28,7 @@ export default function LoginForm(props) {
             value={props.values.password} 
             onChange={props.onChange} />
           </label>          
-          <button type="submit">Login</button>
-          
+          <button type="submit">login</button>          
         </form>
       </div>
     </main>

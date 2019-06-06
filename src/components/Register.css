@@ -1,0 +1,33 @@
+.register {
+  margin-top: 125px;
+}
+
+.register form {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.register form input {
+  padding: 7px;
+  border-radius: 3px;
+  margin: 3px;
+  width: 210px;
+}
+
+.dropdown {
+  padding: 5px 0;
+  margin-top: 3px;
+  border-radius: 3px;
+}
+
+.register form button {
+  padding: 5px;
+  margin-top: 5px;
+  width: 320px;
+  border-radius: 3px;
+}
+
+.register  img {
+  width: 350px;
+  margin-top: -10px;
+}
