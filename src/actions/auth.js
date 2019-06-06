@@ -11,7 +11,7 @@ const loginSuccess = jwt => ({
 
 export const login = (userName, password) => dispatch => {
   request
-    .post(`${baseUrl}/logins`)
+    .post(`${baseUrl}/login`)
     .send({ userName, password })
     .then(response => {
       dispatch(loginSuccess(response.body.jwt));

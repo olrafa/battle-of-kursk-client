@@ -38,7 +38,7 @@ class RegisterContainer extends React.Component {
       country: null,
     })
     alert("You have successfully created your account")
-    setTimeout( () => this.props.history.push('/'), 2000)
+    setTimeout( () => this.props.history.push('/login'), 2000)
   }
 
   selectCountry = (val) => {

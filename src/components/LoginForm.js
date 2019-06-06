@@ -29,7 +29,7 @@ export default function LoginForm(props) {
             onChange={props.onChange} />
           </label>          
           <button type="submit">Login</button>
-          <button onClick={props.onClick}>register</button>
+          
         </form>
       </div>
     </main>
