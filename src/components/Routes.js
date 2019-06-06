@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import LoginContainer from "./LoginContainer";
@@ -17,7 +17,6 @@ function Routes(props) {
           <Route path="/login" component={LoginContainer} />
           <Route path="/games" exact component={GamesLobbyContainer} />
           <Route path='/games/:id' component={GamesBoardContainer} />
-
       </div>
     </main>
   );
