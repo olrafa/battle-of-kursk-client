@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #94A193;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.logo {
+  width: 500px;
+  position: absolute;
+  top: -60px;
+  left: 725px;
+}
+
+@media screen and (max-width: 940px) {
+  .logo {
+    width: 500px;
+    position: absolute;
+    top: -60px;
+    left: 225px;
+  }
 }

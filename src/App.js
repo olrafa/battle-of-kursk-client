@@ -1,26 +1,17 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import { connect } from 'react-redux';
-import './App.css';
-import LoginContainer from './components/LoginContainer';
-import RegisterContainer from './components/RegisterContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      <h1>Battel Of Kursk</h1>
-      </header>
-      {/* below this is a template */}
-      <main>
-        <Route exact path="/" component={LoginContainer} />
-        <Route path="/register" component={RegisterContainer} />
-        {/* <Route path="/game1" component={} />
-        <Route path="/game2" component={} />
-        <Route path="/game3" component={} /> */}
-      </main>
-    </div>
-  );
+import React, { Component } from "react";
+import store from "./store";
+import { Provider } from "react-redux";
+import Routes from "./components/Routes";
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Routes />
+      </Provider>
+    );
+  }
 }
 
 export default App;
