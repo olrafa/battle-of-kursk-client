@@ -18,7 +18,7 @@ export default function GameBoard(props) {
 
     {game.playerOneBoard.map(row => 
       <li>{row.map( column => 
-      <button>{column}</button>)}</li>)}
+      <button onClick={() => props.onClick(row, column)}>{column}</button>)}</li>)}
     </div>)
 
   const fleetP1 = (

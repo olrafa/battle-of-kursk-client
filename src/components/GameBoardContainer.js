@@ -5,6 +5,8 @@ import { loadGame, updateGame } from '../actions/games'
 
 class GameBoardContainer extends React.Component {
 
+
+
   componentDidMount() {
     const { id } = this.props.match.params
     this.props.loadGame(Number(id))
