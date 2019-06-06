@@ -5,6 +5,7 @@ import { withRouter } from "react-router";
 import LoginContainer from "./LoginContainer";
 import GamesLobbyContainer from "./GamesLobbyContainer";
 import GamesBoardContainer from './GameBoardContainer'
+import RegisterContainer from "./RegisterContainer"
 
 import '../App.css'
 
@@ -15,6 +16,7 @@ function Routes(props) {
       </header>
       <div>
           <Route path="/login" component={LoginContainer} />
+          <Route path="/register" component={RegisterContainer} />
           <Route path="/games" exact component={GamesLobbyContainer} />
           <Route path='/games/:id' component={GamesBoardContainer} />
 
