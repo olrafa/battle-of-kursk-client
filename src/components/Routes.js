@@ -17,6 +17,7 @@ function Routes(props) {
           <Route path="/login" component={LoginContainer} />
           <Route path="/games" exact component={GamesLobbyContainer} />
           <Route path='/games/:id' component={GamesBoardContainer} />
+
       </div>
     </main>
   );
