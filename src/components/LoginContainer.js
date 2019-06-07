@@ -24,7 +24,7 @@ class LoginFormContainer extends React.Component {
 
   render() {
     return (
-     <div>
+      <div>
        <LoginForm 
       onSubmit={this.onSubmit} 
       onChange={this.onChange} 

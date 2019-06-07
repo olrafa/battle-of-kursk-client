@@ -45,7 +45,7 @@ const gameFetched = game => ({
 export const loadGame = (id) => (dispatch) => {
   request(`${baseUrl}/games/${id}`)
   .then(response => {
-    dispatch(gameFetched(response.body))
+    dispatch(gameFetched(response.body.game))
   })
   .catch(console.error)
 }
@@ -62,7 +62,7 @@ export const updateGame = (id, data) => dispatch => {
   .patch(`${baseUrl}/games/${id}`)
   .send(data)
   .then(response => {
-    dispatch(gameUpdateSuccess(response.body))
+    dispatch(gameUpdateSuccess(response.body.game))
   })
   .catch(console.error)
 }
