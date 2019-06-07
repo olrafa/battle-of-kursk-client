@@ -5,7 +5,7 @@ export default function RomansBoard(props) {
   const { roman } = props
 
   if (!roman) return 'Loading...'
-  console.log(roman)
+  console.log(roman.roman)
 
 
   return (
