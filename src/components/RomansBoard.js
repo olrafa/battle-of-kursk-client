@@ -17,7 +17,7 @@ export default function RomansBoard(props) {
     </div>)
 
   const answerBox = (<div>
-    <h4>Type the answer below IN ROMANS</h4><input type='text'></input></div>)
+    <h4>Type the answer below IN ROMANS</h4><input type='text'></input><button>send</button></div>)
 
 
   return (

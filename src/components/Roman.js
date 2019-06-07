@@ -26,3 +26,4 @@ const joinRomans = () => {
 
 joinRomans();
 
+console.log(toArabic('MCMXCIX'))
