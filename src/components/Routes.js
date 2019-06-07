@@ -18,7 +18,7 @@ function Routes(props) {
       <header className="App-header">
       </header>
       <div>
-          <Route path="/login" component={LoginContainer} />
+          <Route path="/" component={LoginContainer} />
           <Route path="/register" component={RegisterContainer} />
           <Route path="/games" exact component={GamesLobbyContainer} />
           <Route path='/games/:id' component={GamesBoardContainer} />
