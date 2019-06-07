@@ -45,7 +45,7 @@ const romanFetched = roman => ({
 export const loadRoman = (id) => (dispatch) => {
   request(`${baseUrl}/romans/${id}`)
   .then(response => {
-    dispatch(romanFetched(response.body))
+    dispatch(romanFetched(response.body.roman))
   })
   .catch(console.error)
 }

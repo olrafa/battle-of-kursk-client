@@ -7,11 +7,10 @@ const newNumber = Math.floor(Math.random()*91)+10
 
 export default function RomansBoard(props) {
 
-  const { roman } = props
+  const {roman} = props
 
   if (!roman) return 'Loading...'
-  console.log(roman.roman)
-
+  
   const displayedNumbers = (<div>
     <p>{toRoman(firstNumber)} + {toRoman(newNumber)} </p>
     </div>)
@@ -25,7 +24,6 @@ export default function RomansBoard(props) {
       <h1>Welcome to Game # {roman.id}</h1>
       <h3>{displayedNumbers}</h3>
       <h4>{answerBox}</h4>
-      <p>Player One (id): {roman.playerOne} - Player Two (id): {roman.playerTwo}</p>
     </div>
   )
 }
