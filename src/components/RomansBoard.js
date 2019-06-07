@@ -1,9 +1,12 @@
 import * as React from 'react'
 
-const toArabic = require ('roman-numerals').toArabic
+//const toArabic = require ('roman-numerals').toArabic
 const toRoman = require ('roman-numerals').toRoman
 const firstNumber = Math.floor(Math.random()*91)+10
-const newNumber = Math.floor(Math.random()*91)+10
+const secondNumber = Math.floor(Math.random()*91)+10
+const rightAnswer = firstNumber + secondNumber
+const rightRoman = toRoman(rightAnswer)
+console.log(rightRoman)
 
 export default function RomansBoard(props) {
 
@@ -12,7 +15,7 @@ export default function RomansBoard(props) {
   if (!roman) return 'Loading...'
   
   const displayedNumbers = (<div>
-    <p>{toRoman(firstNumber)} + {toRoman(newNumber)} </p>
+    <p>{toRoman(firstNumber)} + {toRoman(secondNumber)} </p>
     </div>)
 
   const answerBox = (<div>
